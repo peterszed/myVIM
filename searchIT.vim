@@ -1,16 +1,19 @@
-function SearchIt(visualMode)
-   if a:visualMode ==# 'v'
-        execute "normal! `<v`>y"
-    elseif a:visualMode ==# 'V'
-        execute "normal! `<v`>y"
-    else
-        return
-    endif 
-    let searchTerm = getreg("@")
-    let searchTerm  = substitute(searchTerm, "\\s", "+", "g")
+function! SearchIt()
+    execute "normal! `<v`>y"
+    let l:searchTerm = getreg("@")
+    let l:searchTerm  = substitute(l:searchTerm, "\\s", "+", "g")
     let l:command = "https://google.com/search?q="
     execute "! start chrome ".l:command.l:searchTerm  
 "    echo l:searchTerm
 endfunction
 
-vnoremap find :call SearchIt(visualmode())<cr>
+function! OpenIt()
+    execute "normal! `<v`>y"
+    let l:searchTerm = getreg("@")
+    execute "! start chrome ".l:searchTerm  
+"    echo l:searchTerm
+endfunction
+" some text here for testing
+" github.com
+vnoremap goo :call SearchIt()<cr>
+vnoremap open :call OpenIt() <cr>
