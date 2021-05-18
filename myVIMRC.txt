@@ -209,6 +209,9 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 nnoremap ,html :-read $VIMRUNTIME/skeletons/.skeleton.html<CR>3jwf>a
 
 
+
+
+
 " ======================================= vimDiff
 " Use the internal diff if available.
 " Otherwise use the special 'diffexpr' for Windows.
