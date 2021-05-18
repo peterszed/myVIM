@@ -11,6 +11,14 @@ function Biber()
     execute "!biber ".g:filename
 endfunction 
 
+function OpenPDF()
+    let g:filename = expand('%:p') 
+    let l:pdfname  = substitute(g:filename, "\\.tex", ".pdf", "g")
+    silent execute "!AcroRd32.exe ".l:pdfname
+endfunction
+
+
 
 command Clatex :call Clatex()
 command Biber :call Biber()
+command OpenPDF :call OpenPDF()
