@@ -1,8 +1,8 @@
 function Clatex()
     let g:filename = expand('%:p') 
-    execute "!pdflatex ".g:filename
+    silent execute "!pdflatex ".g:filename
     let l:pdfname  = substitute(g:filename, "\\.tex", ".pdf", "g")
-    execute "!AcroRd32.exe ".l:pdfname
+    silent execute "!AcroRd32.exe ".l:pdfname
 endfunction
 
 function Biber()
