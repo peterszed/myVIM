@@ -3,14 +3,14 @@ function! SearchIt()
     let l:searchTerm = getreg("@")
     let l:searchTerm  = substitute(l:searchTerm, "\\s", "+", "g")
     let l:command = "https://google.com/search?q="
-    execute "! start chrome ".l:command.l:searchTerm  
+    silent execute "! start chrome ".l:command.l:searchTerm  
 "    echo l:searchTerm
 endfunction
 
 function! OpenIt()
     execute "normal! `<v`>y"
     let l:searchTerm = getreg("@")
-    execute "! start chrome ".l:searchTerm  
+    silent execute "! start chrome ".l:searchTerm  
 "    echo l:searchTerm
 endfunction
 " some text here for testing
