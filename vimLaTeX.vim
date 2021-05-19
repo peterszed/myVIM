@@ -2,7 +2,8 @@ function Clatex()
     let g:filename = expand('%:p') 
     silent execute "!pdflatex ".g:filename
     let l:pdfname  = substitute(g:filename, "\\.tex", ".pdf", "g")
-    silent execute "!AcroRd32.exe ".l:pdfname
+"    silent execute "!AcroRd32.exe ".l:pdfname
+"    silent execute "!start texworks ".l:pdfname
 endfunction
 
 function Biber()
@@ -14,7 +15,8 @@ endfunction
 function OpenPDF()
     let g:filename = expand('%:p') 
     let l:pdfname  = substitute(g:filename, "\\.tex", ".pdf", "g")
-    silent execute "!AcroRd32.exe ".l:pdfname
+"    silent execute "!AcroRd32.exe ".l:pdfname
+    silent execute "!start texworks ".l:pdfname
 endfunction
 
 
