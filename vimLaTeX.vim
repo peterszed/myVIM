@@ -1,4 +1,5 @@
 function Clatex()
+    write
     let g:filename = expand('%:p') 
     silent execute "!pdflatex ".g:filename
     let l:pdfname  = substitute(g:filename, "\\.tex", ".pdf", "g")
