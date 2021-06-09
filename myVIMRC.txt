@@ -208,6 +208,8 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 "nnoremap ,html :-read $HOME/.vim/.skeleton.html<CR>3jwf>a
 nnoremap ,html :-read $VIMRUNTIME/skeletons/.skeleton.html<CR>3jwf>a
 
+" detect ejs filetype
+au BufNewFile,BufRead *.ejs set filetype=html
 
 
 
