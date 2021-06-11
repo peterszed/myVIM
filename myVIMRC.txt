@@ -181,6 +181,9 @@ set colorcolumn=80
 set nocompatible
 syntax on
 
+" set the leader
+let mapleader = "-"
+
 " this helps with copying
 vnoremap <C-c> "+y
 map <C-p> "+P
@@ -202,6 +205,8 @@ autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
 
+" map CtrlP plugin to leader
+let g:ctrlp_map = '<leader>p'
 
 " snippets add text files and make maps to it
 " example
