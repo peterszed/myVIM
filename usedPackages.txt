@@ -3,3 +3,4 @@ NerdTree
 ctags
 vim-surround
 AutoComplPop
+MatchTag
