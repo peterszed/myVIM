@@ -205,6 +205,9 @@ autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
 
+" NerdTree refresh
+nmap <leader>r :NERDTreeFocus<cr>R<c-w>l
+
 " map CtrlP plugin to leader
 let g:ctrlp_map = '<leader>p'
 
@@ -215,9 +218,7 @@ nnoremap ,html :-read $VIMRUNTIME/skeletons/.skeleton.html<CR>3jwf>a
 
 " detect ejs filetype
 au BufNewFile,BufRead *.ejs set filetype=html
-
-
-
+au BufNewFile,BufRead *.ejs set omnifunc=javascriptcomplete#CompleteJS
 
 " ======================================= vimDiff
 " Use the internal diff if available.
