@@ -39,5 +39,5 @@ command Biber :call Biber()
 command OpenPDF :call OpenPDF()
 
 " key binding for len :: LatexEnvironment
-nnoremap len :normal! 0dwi\begin{<esc>pa}<cr>\end{<esc>pa}<esc>O<esc>k$
+nnoremap <leader>len :normal! 0dwi\begin{<esc>pa}<cr>\end{<esc>pa}<esc>O<esc>k$
 
